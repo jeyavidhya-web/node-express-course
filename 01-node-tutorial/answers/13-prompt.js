@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
               <option value="white">White</option>
               <option value="lightblue">Light Blue</option>
               <option value="lightgreen">Light Green</option>
-              <option value="Gray">Yellow</option>
+              <option value="Gray">Gray</option>
               <option value="pink">Pink</option>
             </select>
             <button type="submit">Set Color</button>
@@ -35,9 +35,11 @@ const server = http.createServer((req, res) => {
     });
 
     req.on('end', () => {
-      const formData = querystring.parse(body);ls
+      const formData = querystring.parse(body);
 });
 
 server.listen(3000, () => {
   console.log('Server running at http://localhost:3000/');
-});
+  });
+  }
+})

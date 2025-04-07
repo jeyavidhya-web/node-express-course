@@ -3,6 +3,7 @@ const path = require('path');
 const { products } = require("./data");  // Importing the products array
 const app = express();
 
+
 app.use(express.static('./public'));
 
 // Serve index.html file

@@ -6,7 +6,7 @@ const connectDB = (url) => {
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
-  })
-}
+  });
+};
 
-module.exports = connectDB
+module.exports = connectDB;

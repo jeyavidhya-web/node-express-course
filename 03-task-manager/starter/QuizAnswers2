@@ -1,0 +1,10 @@
+//To catch errors in async functions without using try/catch every time and send them to the error handler.
+
+const getTask = asyncWrapper(async (req, res, next) => {  
+  const { id: taskID } = req.params;  
+  const task = await Task.findOne({ _id: taskID });  
+  if (!task) {  
+    return next(new CostumAPIError (`No task with id : ${taskID}`, 404)); 
+  }  
+  res.status(200).json({ task });  
+});  

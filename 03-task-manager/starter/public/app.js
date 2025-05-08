@@ -8,7 +8,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 const app = express();
-const peopleRoutes = require('./routes/people');
+const peopleRoutes = require('../routes/people');
 
 // Middleware to parse JSON
 app.use(express.json());

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 //const MONGO_URI = 'mongodb+srv://yourusername:yourpassword@cluster0.ydlvm1l.mongodb.net/taskmanager?retryWrites=true&w=majority';
 
-const personSchema = new mongoose.Schema({
+const TaskSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'must provide name'],
@@ -23,4 +23,4 @@ const personSchema = new mongoose.Schema({
   //timestamps: true, // adds createdAt and updatedAt automatically
 //});
 //const Person = mongoose.models('Person', PersonSchema);
-module.exports = mongoose.model('person', personSchema);
+module.exports = mongoose.model('Task', TaskSchema);
